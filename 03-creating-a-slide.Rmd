@@ -1,0 +1,65 @@
+
+# Creating a slide
+
+## Problem
+
+You want to create a slide in `xaringan`.
+
+## Companion Deck
+
+[slides](http://xaringan-field-guide-companion.davisvaughan.com/03-creating-a-slide/creating-a-slide.html#1)
+
+## Solution
+
+In `xaringan`, your entire presentation is created using 1 RMarkdown file. 
+
+* Slides are separated with a triple dash, `---`. The triple dash represents the beginning of a slide.
+
+* You can write plain text between two sets of `---` and have it show up as text
+on the slide.
+
+The chunk below demonstrates how to create a slide, and add some text.
+
+```{r, eval = FALSE}
+---
+
+Hello reader
+
+---
+```
+ 
+## Discussion
+
+There are two extra caveats here. 
+
+1) A title slide is automatically generated for you from the YAML header. This
+is the first chunk of information that you should see in the template. It should
+start with `title:`.
+
+2) For the first slide after the title slide, you do not need to add a `---` to 
+get it to render. It is already provided for you by the YAML header. The 
+companion example for this lesson provides the following snippet to demonstrate this:
+
+```{bash, eval=FALSE}
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+date: "2016/12/12"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+^ Everything up until now was provided for you
+This is the slide following the title
+
+---
+
+Another slide
+```
+

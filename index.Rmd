@@ -21,6 +21,18 @@ is here to serve the purpose of providing solutions to some of the most common
 tweaks that you might want to perform. This will in no way be an exhaustive list,
 but hopefully can get new users to `xaringan` up and running quickly.
 
+This book has a [companion repo](https://github.com/DavisVaughan/xaringanrecipes-companion) made up of self-contained examples that demonstrate
+the topic of each section. This way the reader can read about the information here,
+and then go there to see all of the code. The rendered slides are also linked to 
+in each corresponding section.
+
+Each section is broken into 4 subsections:
+
+* Problem - Outline the problem to solve
+* Companion Deck - The rendered slide deck corresponding to the problem
+* Solution - A description of the solution to the problem
+* Discussion - Extra details and tips and tricks
+
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

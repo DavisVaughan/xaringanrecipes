@@ -1,0 +1,29 @@
+
+# Getting started with xaringan
+
+## Problem
+
+You want to start using `xaringan` to create slide decks in RMarkdown.
+
+## Companion Deck
+
+[slides](http://xaringan-field-guide-companion.davisvaughan.com/02-getting-started/getting-started.html#1)
+
+## Solution
+
+`xaringan` outputs a number of folders and files to contain everything necessary
+to create your slides. Because of this, I suggest using an RStudio Project to 
+keep everything nice and tidy. From RStudio:
+
+`File -> New Project... -> New Directory -> New Project`
+
+Then create a `xaringan` slide deck from the template provided by the package.
+
+`File -> New File -> R Markdown -> From Template -> Ninja Presentation`
+
+## Discussion
+
+The template is the easiest way to get started with `xaringan`. It provides
+a full working example of the things you can build. As soon as you open the 
+template presentation, you can click `Knit` to have it immediately render
+a presentation in the viewer.

@@ -1,0 +1,25 @@
+
+# Installing xaringan
+
+## Problem
+
+You want to install the `xaringan` package.
+
+## Companion Deck
+
+None
+
+## Solution
+
+Great! You have two options, install from CRAN to get the stable version,
+or from GitHub to get the development version.
+
+```{r, eval=FALSE}
+install.packages("xaringan")
+
+devtools::install_github("yihui/xaringan")
+```
+
+## Discussion
+
+This book will use the CRAN version. Specifically version `0.6`. 

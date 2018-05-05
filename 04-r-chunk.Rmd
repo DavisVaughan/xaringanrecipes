@@ -1,0 +1,49 @@
+
+# Adding R chunks to slides
+
+## Problem
+
+You want to add executable R code to a slide.
+
+## Companion Deck
+
+[slides](http://xaringan-field-guide-companion.davisvaughan.com/04-r-chunk/r-chunk.html#1)
+
+## Solution
+
+Just like with RMarkdown/Notebooks, you can add executable R code with chunks. While on a slide,
+just add a chunk like you would with RMarkdown, and type the code that you want to execute.
+
+
+````
+---
+
+Here is some R code
+
+```{r}`r ''`
+1 + 1
+```
+
+---
+````
+
+This will render both the R code AND the output. We can use this to programmatically
+generate images in our slides. By setting `echo=FALSE`, only the image is shown
+on the slide.
+
+````
+---
+
+We can use this to generate images programatically
+
+```{r, echo=FALSE}`r ''`
+plot(cars)
+```
+
+---
+````
+
+
+ 
+## Discussion
+

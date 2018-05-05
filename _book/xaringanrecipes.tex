@@ -31,6 +31,46 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -128,6 +168,27 @@ solutions to some of the most common tweaks that you might want to
 perform. This will in no way be an exhaustive list, but hopefully can
 get new users to \texttt{xaringan} up and running quickly.
 
+This book has a
+\href{https://github.com/DavisVaughan/xaringanrecipes-companion}{companion
+repo} made up of self-contained examples that demonstrate the topic of
+each section. This way the reader can read about the information here,
+and then go there to see all of the code. The rendered slides are also
+linked to in each corresponding section.
+
+Each section is broken into 4 subsections:
+
+\begin{itemize}
+\tightlist
+\item
+  Problem - Outline the problem to solve
+\item
+  Companion Deck - The rendered slide deck corresponding to the problem
+\item
+  Solution - A description of the solution to the problem
+\item
+  Discussion - Extra details and tips and tricks
+\end{itemize}
+
 \hypertarget{about-the-author}{%
 \chapter*{About the Author}\label{about-the-author}}
 \addcontentsline{toc}{chapter}{About the Author}
@@ -139,18 +200,208 @@ co-author of several packages hosted under the
 \href{http://www.business-science.io/}{Business Science} name including
 \textbf{tidyquant}, \textbf{tibbletime}, and \textbf{timetk}.
 
-\hypertarget{getting-started-with-xaringan}{%
-\chapter{Getting started with
-xaringan}\label{getting-started-with-xaringan}}
+\hypertarget{installing-xaringan}{%
+\chapter{Installing xaringan}\label{installing-xaringan}}
 
 \hypertarget{problem}{%
 \section{Problem}\label{problem}}
 
+You want to install the \texttt{xaringan} package.
+
+\hypertarget{companion-deck}{%
+\section{Companion Deck}\label{companion-deck}}
+
+None
+
 \hypertarget{solution}{%
 \section{Solution}\label{solution}}
 
+Great! You have two options, install from CRAN to get the stable
+version, or from GitHub to get the development version.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"xaringan"}\NormalTok{)}
+
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"yihui/xaringan"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
+
+This book will use the CRAN version. Specifically version \texttt{0.6}.
+
+\hypertarget{getting-started-with-xaringan}{%
+\chapter{Getting started with
+xaringan}\label{getting-started-with-xaringan}}
+
+\hypertarget{problem-1}{%
+\section{Problem}\label{problem-1}}
+
+You want to start using \texttt{xaringan} to create slide decks in
+RMarkdown.
+
+\hypertarget{companion-deck-1}{%
+\section{Companion Deck}\label{companion-deck-1}}
+
+\href{http://xaringan-field-guide-companion.davisvaughan.com/02-getting-started/getting-started.html\#1}{slides}
+
+\hypertarget{solution-1}{%
+\section{Solution}\label{solution-1}}
+
+\texttt{xaringan} outputs a number of folders and files to contain
+everything necessary to create your slides. Because of this, I suggest
+using an RStudio Project to keep everything nice and tidy. From RStudio:
+
+\texttt{File\ -\textgreater{}\ New\ Project...\ -\textgreater{}\ New\ Directory\ -\textgreater{}\ New\ Project}
+
+Then create a \texttt{xaringan} slide deck from the template provided by
+the package.
+
+\texttt{File\ -\textgreater{}\ New\ File\ -\textgreater{}\ R\ Markdown\ -\textgreater{}\ From\ Template\ -\textgreater{}\ Ninja\ Presentation}
+
+\hypertarget{discussion-1}{%
+\section{Discussion}\label{discussion-1}}
+
+The template is the easiest way to get started with \texttt{xaringan}.
+It provides a full working example of the things you can build. As soon
+as you open the template presentation, you can click \texttt{Knit} to
+have it immediately render a presentation in the viewer.
+
+\hypertarget{creating-a-slide}{%
+\chapter{Creating a slide}\label{creating-a-slide}}
+
+\hypertarget{problem-2}{%
+\section{Problem}\label{problem-2}}
+
+You want to create a slide in \texttt{xaringan}.
+
+\hypertarget{companion-deck-2}{%
+\section{Companion Deck}\label{companion-deck-2}}
+
+\href{http://xaringan-field-guide-companion.davisvaughan.com/03-creating-a-slide/creating-a-slide.html\#1}{slides}
+
+\hypertarget{solution-2}{%
+\section{Solution}\label{solution-2}}
+
+In \texttt{xaringan}, your entire presentation is created using 1
+RMarkdown file.
+
+\begin{itemize}
+\item
+  Slides are separated with a triple dash, \texttt{-\/-\/-}. The triple
+  dash represents the beginning of a slide.
+\item
+  You can write plain text between two sets of \texttt{-\/-\/-} and have
+  it show up as text on the slide.
+\end{itemize}
+
+The chunk below demonstrates how to create a slide, and add some text.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{---}
+
+\NormalTok{Hello reader}
+
+\OperatorTok{---}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{discussion-2}{%
+\section{Discussion}\label{discussion-2}}
+
+There are two extra caveats here.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  A title slide is automatically generated for you from the YAML header.
+  This is the first chunk of information that you should see in the
+  template. It should start with \texttt{title:}.
+\item
+  For the first slide after the title slide, you do not need to add a
+  \texttt{-\/-\/-} to get it to render. It is already provided for you
+  by the YAML header. The companion example for this lesson provides the
+  following snippet to demonstrate this:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{---}
+\ExtensionTok{title}\NormalTok{: }\StringTok{"Presentation Ninja"}
+\ExtensionTok{subtitle}\NormalTok{: }\StringTok{"⚔<br/>with xaringan"}
+\ExtensionTok{author}\NormalTok{: }\StringTok{"Yihui Xie"}
+\ExtensionTok{date}\NormalTok{: }\StringTok{"2016/12/12"}
+\ExtensionTok{output}\NormalTok{:}
+  \ExtensionTok{xaringan}\NormalTok{::moon_reader:}
+    \ExtensionTok{lib_dir}\NormalTok{: libs}
+    \ExtensionTok{nature}\NormalTok{:}
+      \ExtensionTok{highlightStyle}\NormalTok{: github}
+      \ExtensionTok{highlightLines}\NormalTok{: true}
+      \ExtensionTok{countIncrementalSlides}\NormalTok{: false}
+\ExtensionTok{---}
+
+\NormalTok{^ }\ExtensionTok{Everything}\NormalTok{ up until now was provided for you}
+\ExtensionTok{This}\NormalTok{ is the slide following the title}
+
+\ExtensionTok{---}
+
+\ExtensionTok{Another}\NormalTok{ slide}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{adding-r-chunks-to-slides}{%
+\chapter{Adding R chunks to slides}\label{adding-r-chunks-to-slides}}
+
+\hypertarget{problem-3}{%
+\section{Problem}\label{problem-3}}
+
+You want to add executable R code to a slide.
+
+\hypertarget{companion-deck-3}{%
+\section{Companion Deck}\label{companion-deck-3}}
+
+\href{http://xaringan-field-guide-companion.davisvaughan.com/04-r-chunk/r-chunk.html\#1}{slides}
+
+\hypertarget{solution-3}{%
+\section{Solution}\label{solution-3}}
+
+Just like with RMarkdown/Notebooks, you can add executable R code with
+chunks. While on a slide, just add a chunk like you would with
+RMarkdown, and type the code that you want to execute.
+
+\begin{verbatim}
+---
+
+Here is some R code
+
+```{r}
+1 + 1
+```
+
+---
+\end{verbatim}
+
+This will render both the R code AND the output. We can use this to
+programmatically generate images in our slides. By setting
+\texttt{echo=FALSE}, only the image is shown on the slide.
+
+\begin{verbatim}
+---
+
+We can use this to generate images programatically
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+---
+\end{verbatim}
+
+\hypertarget{discussion-3}{%
+\section{Discussion}\label{discussion-3}}
 
 \bibliography{book.bib,packages.bib}
 

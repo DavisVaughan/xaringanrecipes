@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="creating-a-slide.html">
 
-<link rel="next" href="about-the-author.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -177,41 +177,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">A Field Guide to xaringan</h1>
-<p class="author"><em>Davis Vaughan</em></p>
-<p class="date"><em>2018-05-05</em></p>
+<div id="adding-r-chunks-to-slides" class="section level1">
+<h1><span class="header-section-number">Field Tip 4</span> Adding R chunks to slides</h1>
+<div id="problem-3" class="section level2">
+<h2><span class="header-section-number">4.1</span> Problem</h2>
+<p>You want to add executable R code to a slide.</p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p><a href="https://github.com/yihui/xaringan"><code>xaringan</code></a> is a powerful slide editor package built by <a href="https://github.com/yihui">Yihui Xie</a>,
-a software engineer at RStudio. While the defaults he sets are incredibly well
-thought out, most of us can’t resist wanting to tweak our slides in every way
-imaginable. This book, inspired by <a href="https://twitter.com/hrbrmstr">Bob Rudis</a>’s
-<a href="https://rud.is/books/21-recipes/index.html"><em>21 Recipes for Mining Twitter with rtweet</em></a>,
-is here to serve the purpose of providing solutions to some of the most common
-tweaks that you might want to perform. This will in no way be an exhaustive list,
-but hopefully can get new users to <code>xaringan</code> up and running quickly.</p>
-<p>This book has a <a href="https://github.com/DavisVaughan/xaringanrecipes-companion">companion repo</a> made up of self-contained examples that demonstrate
-the topic of each section. This way the reader can read about the information here,
-and then go there to see all of the code. The rendered slides are also linked to
-in each corresponding section.</p>
-<p>Each section is broken into 4 subsections:</p>
-<ul>
-<li>Problem - Outline the problem to solve</li>
-<li>Companion Deck - The rendered slide deck corresponding to the problem</li>
-<li>Solution - A description of the solution to the problem</li>
-<li>Discussion - Extra details and tips and tricks</li>
-</ul>
+<div id="companion-deck-3" class="section level2">
+<h2><span class="header-section-number">4.2</span> Companion Deck</h2>
+<p><a href="http://xaringan-field-guide-companion.davisvaughan.com/04-r-chunk/r-chunk.html#1">slides</a></p>
+</div>
+<div id="solution-3" class="section level2">
+<h2><span class="header-section-number">4.3</span> Solution</h2>
+<p>Just like with RMarkdown/Notebooks, you can add executable R code with chunks. While on a slide,
+just add a chunk like you would with RMarkdown, and type the code that you want to execute.</p>
+<pre><code>---
 
+Here is some R code
+
+```{r}
+1 + 1
+```
+
+---</code></pre>
+<p>This will render both the R code AND the output. We can use this to programmatically
+generate images in our slides. By setting <code>echo=FALSE</code>, only the image is shown
+on the slide.</p>
+<pre><code>---
+
+We can use this to generate images programatically
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+---</code></pre>
+</div>
+<div id="discussion-3" class="section level2">
+<h2><span class="header-section-number">4.4</span> Discussion</h2>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="creating-a-slide.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="about-the-author.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
