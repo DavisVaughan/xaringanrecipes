@@ -9,6 +9,8 @@ You want to create a slide in `xaringan`.
 
 [slides](http://xaringan-field-guide-companion.davisvaughan.com/03-creating-a-slide/creating-a-slide.html#1)
 
+[deck Rmd](https://github.com/DavisVaughan/xaringanrecipes-companion/tree/master/03-creating-a-slide)
+
 ## Solution
 
 In `xaringan`, your entire presentation is created using 1 RMarkdown file. 

@@ -9,6 +9,8 @@ You want to start using `xaringan` to create slide decks in RMarkdown.
 
 [slides](http://xaringan-field-guide-companion.davisvaughan.com/02-getting-started/getting-started.html#1)
 
+[deck Rmd](https://github.com/DavisVaughan/xaringanrecipes-companion/tree/master/02-getting-started)
+
 ## Solution
 
 `xaringan` outputs a number of folders and files to contain everything necessary

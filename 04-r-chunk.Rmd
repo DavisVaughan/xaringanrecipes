@@ -9,6 +9,8 @@ You want to add executable R code to a slide.
 
 [slides](http://xaringan-field-guide-companion.davisvaughan.com/04-r-chunk/r-chunk.html#1)
 
+[deck Rmd](https://github.com/DavisVaughan/xaringanrecipes-companion/tree/master/04-r-chunk)
+
 ## Solution
 
 Just like with RMarkdown/Notebooks, you can add executable R code with chunks. While on a slide,
