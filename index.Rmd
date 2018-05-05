@@ -1,0 +1,30 @@
+--- 
+title: "A Field Guide to xaringan"
+author: "Davis Vaughan"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Intro"
+---
+
+# Preface {-}
+
+[`xaringan`](https://github.com/yihui/xaringan) is a powerful slide editor package built by [Yihui Xie](https://github.com/yihui),
+a software engineer at RStudio. While the defaults he sets are incredibly well 
+thought out, most of us can't resist wanting to tweak our slides in every way
+imaginable. This book, inspired by [Bob Rudis](https://twitter.com/hrbrmstr)'s 
+[_21 Recipes for Mining Twitter with rtweet_](https://rud.is/books/21-recipes/index.html),
+is here to serve the purpose of providing solutions to some of the most common
+tweaks that you might want to perform. This will in no way be an exhaustive list,
+but hopefully can get new users to `xaringan` up and running quickly.
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

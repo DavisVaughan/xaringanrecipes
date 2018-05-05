@@ -1,0 +1,8 @@
+
+# About the Author {-}
+
+Davis Vaughan is a lover of all things R and Finance. He is graduating with a Master's
+in Quantitative Finance in May 2018, with immediate plans to work in the 
+fixed income financial industry. He is the co-author of several packages hosted
+under the [Business Science](http://www.business-science.io/) name including
+__tidyquant__, __tibbletime__, and __timetk__.

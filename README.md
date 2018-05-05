@@ -1,0 +1,1 @@
+This is a bookdown guide to common changes you might want to make with xaringan slides.
